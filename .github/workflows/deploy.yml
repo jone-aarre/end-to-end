@@ -63,6 +63,7 @@ jobs:
     environment: ${{ inputs.environmentType }}
     runs-on: ubuntu-latest
     outputs:
+      appServiceAppName: ${{ steps.deploy.outputs.appServiceAppName }}
       appServiceAppHostName: ${{ steps.deploy.outputs.appServiceAppHostName }}
     steps:
     - uses: actions/checkout@v3
